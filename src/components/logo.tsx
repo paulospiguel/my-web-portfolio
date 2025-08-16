@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import getGitHubUser from "@/http/github";
 import { User } from "@/types";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 export function Logo() {
@@ -24,7 +23,7 @@ export function Logo() {
           <AvatarFallback>{user?.name?.charAt(0) || "PS"}</AvatarFallback>
         </Avatar>
         <div>
-          <h3 className="text-xl font-bold">{user?.name}</h3>
+          <h3 className="text-xl font-bold text-start">{user?.name}</h3>
           <p className="text-gray-400 text-sm">Senior Full-Stack Developer</p>
         </div>
       </div>
