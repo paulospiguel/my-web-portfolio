@@ -233,7 +233,8 @@ export const useUser = (): UseUserReturn => {
       cacheService.invalidate(key);
     });
     setCacheStats(cacheService.getStats());
-  }, []);
+    // Se aggregateData for usado dentro desta função, adicionar às dependências
+  }, [aggregateData]); // ✅ Adicionar dependência em falta
 
   // Função para refetch (força busca nova)
   const refetch = useCallback(async () => {

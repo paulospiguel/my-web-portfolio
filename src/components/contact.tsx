@@ -32,13 +32,7 @@ interface FormStatus {
 }
 
 export default function ContactSection() {
-  const { personal, loading: userLoading } = useUserPersonal();
-  const { showForm } = db;
-
-  if (!showForm || userLoading) {
-    return null;
-  }
-
+  // ✅ Mover todos os hooks para o topo, antes de qualquer return
   const [formData, setFormData] = useState<ContactFormData>({
     name: "",
     email: "",
@@ -51,6 +45,15 @@ export default function ContactSection() {
   });
 
   const [status, setStatus] = useState<FormStatus>({ type: "idle" });
+
+  // Hooks personalizados também devem vir antes
+  const { personal, loading: userLoading } = useUserPersonal();
+  const { showForm } = db;
+
+  // ✅ Early return agora vem DEPOIS de todos os hooks
+  if (!showForm || userLoading) {
+    return null;
+  }
 
   // Validação de email
   const validateEmail = (email: string): boolean => {
