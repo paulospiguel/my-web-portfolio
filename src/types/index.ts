@@ -44,6 +44,7 @@ export interface Project {
   code: string;
   demo: string;
   image: string;
+  created_at: string;
 }
 
 export interface BlogPost {

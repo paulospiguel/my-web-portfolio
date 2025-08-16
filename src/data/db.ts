@@ -117,17 +117,18 @@ const educations: Education[] = [
 ];
 
 const projects: Project[] = [
-  // {
-  //   id: 1,
-  //   name: "E-Commerce Platform",
-  //   description:
-  //     "Plataforma completa de e-commerce com painel administrativo, sistema de pagamentos e gestão de inventário. Desenvolvida com React, Node.js e PostgreSQL.",
-  //   tools: ["React", "Node.js", "PostgreSQL", "Stripe", "Docker"],
-  //   role: "Full-Stack Developer",
-  //   code: "https://github.com/paulospiguel/ecommerce-platform",
-  //   demo: "https://ecommerce-demo.vercel.app",
-  //   image: "/projects/ecommerce.jpg",
-  // },
+  {
+    id: 1,
+    name: "Vivendo de Bitcoin",
+    description:
+      "Ferramante que ajuda a calcular quantoa BTC será necessário da sua Reforma e viver de renda de Bitcoin.",
+    tools: ["NextJS", "Node.js", "PostgreSQL", "TypeScript", "TailwindCSS"],
+    role: "Full-Stack Developer",
+    code: "https://github.com/paulospiguel/reforma-bitcoin",
+    demo: "https://vivendodebitcoin.com",
+    image: "/projects/reforma-bitcoin.gif",
+    created_at: "2025",
+  },
   // {
   //   id: 2,
   //   name: "Mobile Banking App",

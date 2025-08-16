@@ -62,7 +62,7 @@ export default function ProjectsSection() {
                             ))}
                           </div>
                         </div>
-                        <div className="flex gap-4">
+                        <div className="flex gap-4 items-center">
                           <Link
                             href={project.code}
                             target="_blank"
@@ -79,6 +79,9 @@ export default function ProjectsSection() {
                             <FaExternalLinkAlt size={16} />
                             <span>Demo</span>
                           </Link>
+                          <span className="text-sm text-gray-400 bg-[#1a1443] px-2 py-1 rounded-full">
+                            {project.created_at}
+                          </span>
                         </div>
                       </div>
                     </div>
